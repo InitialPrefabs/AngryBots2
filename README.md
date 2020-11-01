@@ -2,6 +2,8 @@
 
 ![AB2_1.png](https://i.imgur.com/Hr8P5MV.jpg)
 
+> This project will be updated to use DOTS and provide an example on how to implement UGUIDOTS.
+
 **Description**
 
 Angry Bots 2 is an example Unity Project, developed by Unity Technologies, used to demonstrate several features:
