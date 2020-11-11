@@ -8,18 +8,34 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Player_Mat
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: df4e7a41b4cdc5942bfaac980e3132a0,
+    type: 3}
   m_ShaderKeywords: _EMISSION _METALLICSPECGLOSSMAP _NORMALMAP
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_71e7ae9e9bbb4f3797bd03501f7f69db:
+        m_Texture: {fileID: 2800000, guid: 83d73efd2ee0d4ebca5882e3a87597bb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_85eb7279209642d0b218bab8a9b47ce4:
+        m_Texture: {fileID: 2800000, guid: 003a17a67ac714f44b67409e0df8e7fa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_9d9ee5e1c0264040b7f0853e7d4d83e2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_afbc4e7769e944a0aed989bc17f69f5f:
+        m_Texture: {fileID: 2800000, guid: b69285a77d53f4140ae7008c7d57b0b4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 8ab2b399cab864920a192e34dadbdf01, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -81,6 +97,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_10ce3fcb980b45e7999f96256cf18276: 1
+    - Vector1_beb62d73542c403fb3ef94346aa89eb3: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -102,6 +120,7 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _SkinMatrixIndex: 0
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -111,6 +130,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_5d0c49901938494a943a8714184e7637: {r: 4, g: 4, b: 4, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 6.233318, g: 6.233318, b: 6.233318, a: 1}

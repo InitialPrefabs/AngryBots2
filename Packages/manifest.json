@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.animation": "0.8.0-preview.4",
     "com.unity.dots.editor": "0.10.0-preview",
     "com.unity.entities": "0.14.0-preview.19",
     "com.unity.physics": "0.5.1-preview.2",
