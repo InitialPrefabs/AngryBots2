@@ -65,11 +65,8 @@ namespace AngryBots2.Core.Player.Systems {
                     PhysicsCollider collider = colliders[bodies[hitInfo.RigidBodyIndex].Entity];
                     uint belongsTo = collider.ColliderPtr->Filter.BelongsTo;
 
-                    Debug.DrawLine(start, hitInfo.Position, Color.green);
-
                     if ((belongsTo & Filters.GroundMask) > 0) {
                         float3 movement = math.normalizesafe(hitInfo.Position - c0.Value);
-                        movement.y += 0.5f;
                         c0.Value += movement * deltaTime * c2.Value;
                     }
                 }
