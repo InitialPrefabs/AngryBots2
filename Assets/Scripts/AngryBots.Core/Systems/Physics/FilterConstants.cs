@@ -1,4 +1,4 @@
-namespace AngryBots2.Core {
+namespace AngryBots2.Core.Physics {
 
     public static class Filters { 
 

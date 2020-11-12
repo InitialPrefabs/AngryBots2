@@ -1,3 +1,4 @@
+using AngryBots2.Core.Physics;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Entities;
@@ -7,10 +8,10 @@ using Unity.Physics.Systems;
 using Unity.Transforms;
 using UnityEngine;
 
-namespace AngryBots2.Core.Player.Systems {
+namespace AngryBots2.Core.Transforms.Systems {
 
-    // [UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
-    // [UpdateBefore(typeof(BuildPhysicsWorld))]
+    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
+    [UpdateBefore(typeof(BuildPhysicsWorld))]
     public unsafe class PlayerMovementSystem : SystemBase {
 
         struct CameraInfo {
@@ -46,19 +47,21 @@ namespace AngryBots2.Core.Player.Systems {
             }).WithNativeDisableUnsafePtrRestriction(local).Run();
 
             ComponentDataFromEntity<PhysicsCollider> colliders = GetComponentDataFromEntity<PhysicsCollider>(true);
-            CollisionWorld collisionWorld                      = buildPhysicsWorld.PhysicsWorld.CollisionWorld;
-            NativeArray<RigidBody> bodies                      = buildPhysicsWorld.PhysicsWorld.Bodies;
+
+            CollisionWorld collisionWorld = buildPhysicsWorld.PhysicsWorld.CollisionWorld;
+            NativeArray<RigidBody> bodies = buildPhysicsWorld.PhysicsWorld.Bodies;
 
             Entities.ForEach((ref PhysicsVelocity c0, in InputContainer c1, in Speed c2, in Translation c3) => {
 
                 float3 forward = local->Forward;
                 float3 right   = local->Right;
+
                 forward.y = right.y = 0;
 
-                float3 dir = math.normalizesafe(forward * c1.Axis.y + right * c1.Axis.x);
+                float3 dir   = math.normalizesafe(forward * c1.Axis.y + right * c1.Axis.x);
                 float3 start = c3.Value + new float3(0f, 10f, 0f);
                 float3 next  = start + dir;
-                next.y = -10f;
+                next.y       = -10f;
 
                 RaycastInput ray = new RaycastInput {
                     Start  = start,

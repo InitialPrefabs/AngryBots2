@@ -1,7 +1,7 @@
 using Unity.Entities;
 using UnityEngine;
 
-namespace AngryBots2.Core.Player {
+namespace AngryBots2.Core.Transforms {
 
     public class SpeedAuthoringComponent : MonoBehaviour, IConvertGameObjectToEntity {
 
